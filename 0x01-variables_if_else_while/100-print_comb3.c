@@ -20,7 +20,7 @@ int main(void)
 			}
 			putchar(i + '0');
 			putchar(j + '0');
-			if ( i == 8 && j == 9)
+			if (i == 8 && j == 9)
 			{
 				j++;
 				putchar('\n');
@@ -34,7 +34,7 @@ int main(void)
 			}
 		}
 		i++;
-		j=0;
+		j = 0;
 	}
 	return (0);
 }
