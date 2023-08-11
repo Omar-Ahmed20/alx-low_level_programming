@@ -16,7 +16,7 @@ int main(void)
 		{
 			while (k < 10)
 			{
-				if (i == j || i > j ||  i == k || j == k || i > k)
+				if (i == j || i > j ||  i == k || j == k || i > k || j > k)
 				{
 					k++;
 					continue;
