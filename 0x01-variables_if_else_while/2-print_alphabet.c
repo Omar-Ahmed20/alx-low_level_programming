@@ -6,10 +6,13 @@
  */
 int main(void)
 {
-	for (char i = 97; i < 123; i++)
+	char i = 97;
+
+	while (i < 123)
 	{
 		putchar(i);
 		putchar('\n');
+		i++;
 	}
 	return (0);
 }
