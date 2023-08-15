@@ -19,7 +19,7 @@ void times_table(void)
 			_putchar(' ');
 			re = i * j;
 			if (re <= 9)
-				_putchar((' ');
+				_putchar(' ');
 			else
 				_putchar((re / 10) + 48);
 			_putchar((re % 10) + 48);
