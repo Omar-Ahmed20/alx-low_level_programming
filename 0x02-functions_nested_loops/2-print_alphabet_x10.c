@@ -6,7 +6,6 @@
  */
 void print_alphabet_x10(void)
 {
-	int i = 10;
 	char j = 97;
 
 	while (j < 123)
