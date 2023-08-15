@@ -5,3 +5,4 @@ int _islower(int);
 int _isalpha(int c);
 int print_sign(int n);
 int _abs(int a);
+int ptint_last_digit(int);
