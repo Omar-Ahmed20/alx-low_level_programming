@@ -11,6 +11,6 @@ int _abs(int a)
 		return (-a);
 	else if (a > 0)
 		return (a);
-	else (a == 0)
+	else
 		return (0);
 }
