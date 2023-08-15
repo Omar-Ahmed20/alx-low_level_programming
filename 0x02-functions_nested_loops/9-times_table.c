@@ -27,7 +27,7 @@ void times_table(void)
 			else
 			{
 				_putchar(' ');
-				_putchar((re / 10) + 48);
+				_putchar((re) + 48);
 			}
 			j++;
 		}
