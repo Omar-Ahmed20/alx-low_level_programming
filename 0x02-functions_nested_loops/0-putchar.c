@@ -1,6 +1,14 @@
 #include "main.h"
-int main()
+/**
+ *main - prints string
+ *Return:0 when success else 1
+ */
+int main(void)
 {
-	_putchar('c');
+	char string[] = "_putchar";
+
+	for (int i = 0; i < 8; i++)
+		_putchar(string[i]);
+	_putchar('\n');
 	return (0);
 }
