@@ -13,8 +13,11 @@ void times_table(void)
 	{
 		while (j < 10)
 		{
-			_putchar(',');
-			_putchar(' ');
+			if (j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 			re = i * j;
 			if (re >= 10)
 			{
