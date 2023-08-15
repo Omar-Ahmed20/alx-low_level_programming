@@ -21,6 +21,6 @@ void times_table(void)
 			j++;
 		}
 		i++;
-		i = 0;
+		j = 0;
 	}
 }
