@@ -16,9 +16,12 @@ void times_table(void)
 			re = i * j;
 			_putchar((re / 10) + 48);
 			_putchar((re % 10) + 48);
-			_putchar(',');
-			_putchar(' ');
-			_putchar(' ');
+			if (j != 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+			}
 			j++;
 		}
 		i++;
