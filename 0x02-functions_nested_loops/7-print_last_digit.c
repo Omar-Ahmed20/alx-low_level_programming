@@ -8,8 +8,10 @@
 int print_last_digit(int a)
 {
 	int last;
-
-	if (a < 0)
+	
+	if ( a == INT_MIN)
+		last = -(a - 1) % 10;
+	else if (a < 0)
 		last = (-1 * a) % 10;
 	else
 		last = a % 10;
