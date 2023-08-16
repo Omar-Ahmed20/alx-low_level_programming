@@ -10,13 +10,13 @@ int main(void)
 	unsigned long c;
 	unsigned long sum = 2;
 
-	printf("%ld, %ld, ", a, b);
 	while (1)
 	{
 		c = a + b;
 		if (c > 4000000)
 			break;
-		sum += c;
+		if(c % 2 ==0)	
+			sum += c;
 		a = b;
 		b = c;
 	}
