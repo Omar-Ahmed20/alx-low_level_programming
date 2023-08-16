@@ -15,7 +15,13 @@ int main(void)
 	while (count < 50 )
 	{
 		c = a + b;
-		printf("%ld, ", c);
+		if (count == 49)
+		{
+			printf("%ld\n", c);
+			continue;
+		}
+		else
+			printf("%ld, ", c);
 		a = b;
 		b = c;
 		count++;
