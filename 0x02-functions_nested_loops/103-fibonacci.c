@@ -15,11 +15,11 @@ int main(void)
 		c = a + b;
 		if (c > 4000000)
 			break;
-		if(c % 2 ==0)	
+		if(c % 2 == 0)	
 			sum += c;
 		a = b;
 		b = c;
 	}
-	printf("%ld", sum);
+	printf("%ld\n", sum);
 	return (0);
 }
