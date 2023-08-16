@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int c;
+	unsigned int a = 1;
+	unsigned int b = 2;
+	unsigned int c;
 	int count = 2;
 
 	printf("%d, %d, ", a, b);
