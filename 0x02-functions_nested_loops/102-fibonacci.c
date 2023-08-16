@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
- *
- *
- *
+ * main- main function fabnoci numbers
+ * Return: 0 when success
  */
 int main(void)
 {
@@ -12,7 +11,7 @@ int main(void)
 	int count = 2;
 
 	printf("%ld, %ld, ", a, b);
-	while (count < 50 )
+	while (count < 50)
 	{
 		c = a + b;
 		printf("%ld", c);
