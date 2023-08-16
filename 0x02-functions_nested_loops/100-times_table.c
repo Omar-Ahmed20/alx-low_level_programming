@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * times_table - times table all
- *
+ * print_times_table - times table all
+ * @n: user input
  */
 void print_times_table(int n)
 {
 	int i = 0;
 	int j = 1;
 	int re;
-	
+
 	if (n <= 15 && n >= 0)
 	{
-		while (i < n+1)
+		while (i < n + 1)
 		{
 			_putchar(48);
-			while (j < n+1)
+			while (j < n + 1)
 			{
 				_putchar(',');
 				_putchar(' ');
