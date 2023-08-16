@@ -6,16 +6,16 @@
  */
 int main(void)
 {
-	double a = 1;
-	double b = 2;
-	double c;
+	unsigned int a = 1;
+	unsigned int b = 2;
+	unsigned int c;
 	int count = 2;
 
-	printf("%f, %f, ", a, b);
+	printf("%d, %d, ", a, b);
 	while (count < 51 )
 	{
 		c = a + b;
-		printf("%f, ", c);
+		printf("%d, ", c);
 		a = b;
 		b = c;
 		count++;
