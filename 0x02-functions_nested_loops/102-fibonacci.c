@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	unsigned double a = 1;
-	unsigned double b = 2;
-	unsigned double c;
+	double a = 1;
+	double b = 2;
+	double c;
 	int count = 2;
 
 	printf("%d, %d, ", a, b);
