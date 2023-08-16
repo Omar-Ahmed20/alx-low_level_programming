@@ -27,7 +27,7 @@ void print_times_table(int n)
 				if (re >= 100)
 				{
 					_putchar((re / 100) + 48);
-					_putchar((re / 10) + 48);
+					_putchar((re / 10) % 10 + 48);
 				}
 				else if (re <= 99 && re >= 10)
 					_putchar((re / 10) + 48);
