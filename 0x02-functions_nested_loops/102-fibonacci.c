@@ -17,7 +17,7 @@ int main(void)
 		c = a + b;
 		printf("%ld", c);
 		if (count == 49)
-			printf("\n");
+			printf("");
 		else
 			printf(", ");
 		a = b;
