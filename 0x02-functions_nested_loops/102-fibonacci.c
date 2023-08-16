@@ -6,13 +6,13 @@
  */
 int main(void)
 {
-	unsigned int a = 1;
-	unsigned int b = 2;
-	unsigned int c;
+	unsigned long a = 1;
+	unsigned long b = 2;
+	unsigned long c;
 	int count = 2;
 
 	printf("%d, %d, ", a, b);
-	while (count < 51 )
+	while (count < 50 )
 	{
 		c = a + b;
 		printf("%d, ", c);
