@@ -11,11 +11,11 @@ int main(void)
 	double c;
 	int count = 2;
 
-	printf("%d, %d, ", a, b);
+	printf("%f, %f, ", a, b);
 	while (count < 51 )
 	{
 		c = a + b;
-		printf("%d, ", c);
+		printf("%f, ", c);
 		a = b;
 		b = c;
 		count++;
