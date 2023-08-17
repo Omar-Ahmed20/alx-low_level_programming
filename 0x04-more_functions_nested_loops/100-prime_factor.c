@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	long long int num = 612852475143;
-	long int largest = 0;
-	int i = 2;
+	unsigned long int num = 612852475143;
+	unsigned long int largest = 0;
+	unsigned long int i = 2;
 
 	while (i <= num)
 	{
@@ -20,6 +20,6 @@ int main(void)
 		}
 		i++;
 	}
-	printf("%ld", largest);
+	printf("%ld\n", largest);
 	return (0);
 }
