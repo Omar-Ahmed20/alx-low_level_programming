@@ -1,23 +1,19 @@
 #include "main.h"
 /**
- *
- *
+ * print_number - print any input number by recrussion
+ * @n: user input int
  */
 
 void print_number(int n)
 {
-	int i = 0;
-	int size = 0;
-	int f = 10;
-	int f2 = 10;
+	unsigned int nu = n;
 
-	while((n % f) != n)
+	if (nu < 0)
 	{
-		size++;
-		f*=10;
+		_putchar('-');
+		num = -num;
 	}
-	while (i < size)
-	{
-		_putchar((n / 10) + '0');
-	}
+	if ((nu / 10) > 0)
+		print_number(num / 10);
+	_putchar((nu % 10) + '0');
 }
