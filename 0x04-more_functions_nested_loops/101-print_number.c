@@ -14,6 +14,6 @@ void print_number(int n)
 		num = -num;
 	}
 	if ((nu / 10) > 0)
-		print_number(num / 10);
+		print_number(nu / 10);
 	_putchar((nu % 10) + '0');
 }
