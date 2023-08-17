@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
  * print_triangle - prints inverted triangle
  * @size: user input to determine the size of the triangle
@@ -14,13 +16,13 @@ void print_triangle(int size)
 
 		while (j < size)
 		{
-			if (j < size - i - 1)
+			if (j < (size - i - 1))
 				printf(" ");
 			else
 				printf("#");
 			j++;
 		}
-		_putchar('\n');
+		printf("\n");
 		i++;
 	}
 	if (size <= 0)
