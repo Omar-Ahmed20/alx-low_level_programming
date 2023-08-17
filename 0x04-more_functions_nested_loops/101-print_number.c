@@ -8,10 +8,10 @@ void print_number(int n)
 {
 	unsigned int nu = n;
 
-	if (nu < 0)
+	if (n < 0)
 	{
 		_putchar('-');
-		num = -num;
+		nu = -nu;
 	}
 	if ((nu / 10) > 0)
 		print_number(nu / 10);
