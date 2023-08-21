@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
+ * _strcpy - coppy an array to another array
+ * @dest: first array
+ * @src: second array
+ * Return: the array
  */
 char *_strcpy(char *dest, char *src)
 {
