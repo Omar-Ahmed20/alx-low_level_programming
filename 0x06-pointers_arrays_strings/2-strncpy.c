@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- *
- *
- *
+ * _strncpy - copyr string to array
+ * @dest: input array
+ * @src: string to be copied
+ * @n: number of bytes
+ * Return: pointer to dust
  */
 char *_strncpy(char *dest, char *src, int n)
 {
