@@ -13,7 +13,7 @@ char *cap_string(char *s)
 	{
 		if (s[i] > 96 && s[i] < 123 && i == 0)
 			s[i] -= 32;
-		else if (s[i] == ' ' || s[i] == '\n')
+		else if (s[i] == ' ' || s[i] == '\n' || s[i] == '.' || s[i] == '\t')
 		{
 			if (s[i + 1] > 96 && s[i + 1] < 123)
 				s[i + 1] -= 32;
