@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
+ * _strcmp - compare two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: positive or negative or zero
  */
 
 int _strcmp(char *s1, char *s2)
