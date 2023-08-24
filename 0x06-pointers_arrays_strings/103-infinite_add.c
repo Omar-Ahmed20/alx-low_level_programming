@@ -50,28 +50,27 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		i--;
 		j--;
 		if (i >= 0)
-			s = n1[i] - 48;
+			s = n1[i] - '0';
 		else
 			s = 0;
 		if (j >= 0)
-			f = n2[j] - 48;
+			f = n2[j] - '0';
 		else
-			j = 0;
-		r[k] = ((s + f + d) % 10) + 48;
+			f = 0;
+		r[k] = ((s + f + d) % 10) + '0';
 		d = ((s + f + d) / 10);
 		k--;
 	}
 	if (d == 1)
 	{
-		r[l + 1] = '\n';
+		r[l + 1] = '\0';
 		if (l + 2 > size_r)
 			return (0);
-		while (l >= 0)
+		while (l-- >= 0)
 		{
 			r[l + 1] = r[l];
-			l--;
 		}
-		r[0] = d + 48;
+		r[0] = d + '0';
 	}
 	return (r);
 }
