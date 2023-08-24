@@ -1,6 +1,32 @@
 #include "main.h"
 
 /**
+ * get_length - gets the length of array
+ * @s1: input array
+ * Return: number of array
+ */
+int get_length(char *s1)
+{
+	int i = 0;
+
+	while (s1[i] != '\0')
+		i++;
+	return (i);
+}
+/**
+ * largest - find out who is the largest
+ * @i: first number
+ * @j: second number
+ * Return: the largest
+ */
+int largest(int i, int j)
+{
+	if (i > j)
+		return (i);
+	else
+		return (j);
+}
+/**
  * infinite_add - add any two numbers
  * @n1: first number
  * @n2: second number
@@ -12,15 +38,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int i = 0, j = 0, s = 0, d = 0, f = 0, l = 0, k = 0;
 
-	while (n1[i] != '\0')
-		i++;
-	while (n2[j] != '\0')
-		j++;
-
-	if (i > j)
-		l = i;
-	else
-		l = j;
+	i = get_length(n1);
+	j = get_length(n2);
+	l = largest(i, j);
 	if (l + 1 > size_r)
 		return (0);
 	r[l] = '\0';
