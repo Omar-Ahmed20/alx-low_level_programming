@@ -11,11 +11,11 @@ int main(void)
 	int count = 2;
 
 	printf("%ld, %ld, ", a, b);
-	while (count < 98)
+	while (count < 96)
 	{
 		c = a + b;
 		printf("%ld", c);
-		if (count != 49)
+		if (count != 95)
 			printf(", ");
 		a = b;
 		b = c;
