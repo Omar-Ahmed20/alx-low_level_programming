@@ -2,12 +2,12 @@
 #include <stdio.h>
 
 /**
- * print_digsums - print sum of diagonals
+ * print_diagsums - print sum of diagonals
  * @a: input array pointer
  * @size: size of that square array
  */
 
-void print_digsums(int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int i = 0;
 	int sum = 0;
