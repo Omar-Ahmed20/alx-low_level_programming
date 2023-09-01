@@ -11,17 +11,21 @@
 int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i = 1;
 
-	while (i < argc)
+	while (--argc)
 	{
-		if (atoi(argv[i]) <= 0)
+		char *cha = argv[argc];
+
+		while (*cha)
 		{
-			printf("Error\n");
-			return (1);
+			if (*cha < '0' || *cha > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+			cha++;
 		}
-		sum += atoi(argv[i]);
-		i++;
+		sum += atoi(argv[argc]);
 	}
 	printf("%d\n", sum);
 	return (0);
