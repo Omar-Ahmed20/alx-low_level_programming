@@ -1,12 +1,18 @@
-#include<stdio.h>
-/**
-* main - function print some text
-* Return: 0 if successful else 1
-*/
-int main(void)
-{
-	char word[] = "\"Programming is like building a multilingual puzzle";
+#include "main.h"
 
-	puts(word);
-	return (0);
+/**
+ * _puts - print string
+ * @str: string input
+ */
+
+void _puts(char *str)
+{
+	int i = 0;
+
+	while (str[i] != '\0')
+	{
+		_putchar(str[i]);
+		i++;
+	}
+	_putchar('\n');
 }
