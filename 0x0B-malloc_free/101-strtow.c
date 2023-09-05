@@ -23,6 +23,7 @@ int _strlen(char *str, int j)
 /**
  * _size - get the number of words
  * @str: input string
+ * @i: current position
  * Return: number of words
  */
 int _size(char *str, int i)
