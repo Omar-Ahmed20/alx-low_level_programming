@@ -44,7 +44,7 @@ char **strtow(char *str)
 	if (!(str[i - 1] == ' ' && str[i] != ' '))
 		size++;
 	p = malloc(sizeof(char *) * size);
-	if (p == NULL)
+	if (p == NULL || size == 0)
 		return (NULL);
 	while (j < size)
 	{
