@@ -41,6 +41,8 @@ char **strtow(char *str)
 			size++;
 		i++;
 	}
+	if (!(str[i - 1] == ' ' && str[i] != ' '))
+		size++;
 	p = malloc(sizeof(char) * size);
 	if (p == NULL)
 		return (NULL);
