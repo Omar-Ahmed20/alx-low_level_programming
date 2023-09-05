@@ -31,7 +31,7 @@ char **strtow(char *str)
 	char **p;
 	int i = 0, size = 0, j = 0, c = 0, n = 0;
 
-	if (str == NULL)
+	if (str == NULL || *str == '\0')
 		return (NULL);
 	while (*str == ' ')
 		str++;
