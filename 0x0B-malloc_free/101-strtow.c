@@ -25,8 +25,10 @@ int _strlen(char *str, int j)
  * @str: input string
  * Return: number of words
  */
-int _size(char *str)
+int _size(char *str, int i)
 {
+	int size = 0;
+
 	while (str[i] != '\0')
 	{
 		if (str[i] == ' ' && str[i + 1] != ' ')
@@ -52,7 +54,7 @@ char **strtow(char *str)
 		return (NULL);
 	while (*str == ' ')
 		str++;
-	size = _size(str);
+	size = _size(str, i);
 	p = malloc(sizeof(char *) * size);
 	if (p == NULL || size == 0)
 		return (NULL);
