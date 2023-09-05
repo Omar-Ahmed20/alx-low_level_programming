@@ -43,7 +43,7 @@ char **strtow(char *str)
 	}
 	if (!(str[i - 1] == ' ' && str[i] != ' '))
 		size++;
-	p = malloc(sizeof(char) * size);
+	p = malloc(sizeof(char *) * size);
 	if (p == NULL)
 		return (NULL);
 	while (j < size)
