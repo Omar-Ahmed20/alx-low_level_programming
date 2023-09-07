@@ -24,9 +24,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-	ptr = malloc(nmemb * size);
+	ptr = malloc(nmemb * sizeof(int));
 	if (ptr == NULL)
 		return (NULL);
-	_set(ptr, 0, size * nmemb);
+	_set(ptr, 0, sizeof(int) * nmemb);
 	return (ptr);
 }
