@@ -25,11 +25,12 @@ int _strlen(char *str)
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1 = _strlen(s1);
-	unsigned int len2 = _strlen(s2);
-	char *p = malloc(len1 + len2 + 1);
-	unsigned int i = 0, j = 0;
+	char *p;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
+	len1 = _strlen(s1);
+	len2 = _strlen(s2);
+	p = malloc(len1 + n + 1);
 	if (p == NULL)
 		return (NULL);
 	while (i < len1)
