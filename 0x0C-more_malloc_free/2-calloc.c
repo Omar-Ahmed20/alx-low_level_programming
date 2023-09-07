@@ -1,6 +1,16 @@
 #include "main.h"
 #include <stdlib.h>
+char *_set(char *s, char b, unsigned int n)
+{
+	char *ptr = s;
 
+	while(n--)
+	{
+		*s = b;
+		s++;
+	}
+	return (ptr);
+}
 /**
  * _calloc - allocates memory and set it to 0
  * @nmemb: number of members of that array
@@ -10,20 +20,13 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
 	void *ptr;
-	unsigned int i = 0;
 
 	if (size == 0 || nmemb == 0)
 		return (NULL);
-	p = malloc(nmemb * sizeof(int));
-	if (p == NULL)
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 		return (NULL);
-	while (i < size)
-	{
-		p[i] = '0';
-		i++;
-	}
-	ptr = p;
+	_set(ptr, 0, size * nmemb);
 	return (ptr);
 }
