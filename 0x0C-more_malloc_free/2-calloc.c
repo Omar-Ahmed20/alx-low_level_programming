@@ -1,14 +1,18 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+ * _set - allocates value 0 to memory
+ * @s: pointer to array
+ * @b: the value to be filled with
+ * @n: size of the array
+ * Return: pointer to the array after filling it
+ */
 char *_set(char *s, char b, unsigned int n)
 {
 	char *ptr = s;
 
-	while(n--)
-	{
-		*s = b;
-		s++;
-	}
+	while (n--)
+		*s++ = b;
 	return (ptr);
 }
 /**
