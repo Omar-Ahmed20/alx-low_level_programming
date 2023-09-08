@@ -15,8 +15,23 @@ int _strlen(char *s)
 
 	return (i);
 }
-void _printans(int *str, int i)
+/**
+ * _printans - print the reversed answer in correct order
+ * @str: sting of answer
+ * @l1: length of first string
+ * @l2: length of second string
+ */
+void _printans(int *str, int l1, int l2)
 {
+	int i = l1 + l2;
+
+	while (i >= 0)
+	{
+		if (str[i] > 0)
+			break;
+		i--;
+	}
+
 	while (i >= 0)
 	{
 		_putchar(str[i] + 48);
@@ -24,13 +39,15 @@ void _printans(int *str, int i)
 	}
 	_putchar('\n');
 }
+/**
+ * multiply - multiply two big digits
+ * @s1: first number string
+ * @s2: second number string
+ */
 void multiply(char *s1, char *s2)
 {
-	int i,j,tmp;
-	int l1 = _strlen(s1);
-	int l2 = _strlen(s2);
-	int a[1000], b[1000];
-	int ans[2000] = {0};
+	int i, j, tmp, l1 = _strlen(s1), l2 = _strlen(s2);
+	int a[1000], b[1000], ans[2000] = {0};
 
 	i = l1 - 1;
 	j = 0;
@@ -54,7 +71,7 @@ void multiply(char *s1, char *s2)
 		j = 0;
 		while (j < l1)
 		{
-			ans[i+j] += b[i] * a[j];
+			ans[i + j] += b[i] * a[j];
 			j++;
 		}
 		i++;
@@ -67,15 +84,13 @@ void multiply(char *s1, char *s2)
 		ans[i + 1] = ans[i + 1] + tmp;
 		i++;
 	}
-	i = l1 + l2;
-	while(i >= 0)
-	{
-		if(ans[i] > 0)
-			break;
-		i--;
-	}
-	_printans(ans, i);
+	_printans(ans, l1, l2);
 }
+/**
+ * _isdigit - check if the character is digit
+ * @str: input string
+ * Return: 1 if digit 0 if not
+ */
 int _isdigit(char *str)
 {
 	int i = 0;
@@ -83,17 +98,19 @@ int _isdigit(char *str)
 	while (str[i] != '\0')
 	{
 		int tmp = str[i] - 48;
+
 		if (tmp >= '0' && tmp <= '9')
-			return(0);
+			return (0);
 		i++;
 	}
 	return (1);
 }
 /**
- *
- *
+ * main - main function checks input with error handling
+ * @argc: number of arguments to program
+ * @argv: array of all arguments
+ * Return: 0 if success 98 if fail
  */
-
 int main(int argc, char **argv)
 {
 	char error[] = "Error\n";
@@ -107,10 +124,9 @@ int main(int argc, char **argv)
 			_putchar(error[i]);
 			i++;
 		}
-		_putchar('\n');
 		exit(98);
 	}
-	else if (_isdigit(argv[1]) && _isdigit(argv[2]))
+	else if (!(_isdigit(argv[1]) && _isdigit(argv[2])))
 	{
 		i = 0;
 		while (error[i] != '\0')
@@ -118,7 +134,6 @@ int main(int argc, char **argv)
 			_putchar(error[i]);
 			i++;
 		}
-		_putchar('\n');
 		exit(98);
 	}
 	multiply(argv[1], argv[2]);
