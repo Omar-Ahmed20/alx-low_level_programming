@@ -50,8 +50,7 @@ char *big_multiply(char *s1, char *s2)
 		if (!_isdigit(s1[l1]))
 		{
 			free(r);
-			printf("Error\n");
-			exit(98);
+			printf("Error\n"), exit(98);
 		}
 		a = s1[l1] - 48;
 		c = 0;
@@ -61,14 +60,11 @@ char *big_multiply(char *s1, char *s2)
 			if (!_isdigit(s2[l2]))
 			{
 				free(r);
-				printf("Error\n");
-				exit(98);
+				printf("Error\n"), exit(98);
 			}
 			b = s2[l2] - 48;
-
 			c += r[l1 + l2 + 1] + (a * b);
 			r[l1 + l2 + 1] = c % 10;
-
 			c /= 10;
 			l2--;
 		}
@@ -84,7 +80,7 @@ char *big_multiply(char *s1, char *s2)
  * main - multiply two big number strings
  * @argc: the number of arguments
  * @argv: array of all the arguments
- * Return: Always 0 
+ * Return: Always 0
  */
 int main(int argc, char **argv)
 {
@@ -94,7 +90,7 @@ int main(int argc, char **argv)
 	if (argc != 3)
 	{
 		printf("Error\n");
-	       	exit(98);
+		exit(98);
 	}
 	x = _strlen(argv[1]) + _strlen(argv[2]);
 	res = big_multiply(argv[1], argv[2]);
