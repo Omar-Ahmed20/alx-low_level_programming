@@ -44,7 +44,7 @@ void format_string(char *sep, va_list ap)
 }
 /**
  * print_all - print all arguments
- * @fotmat: the format of the input
+ * @format: the format of the input
  */
 void print_all(const char * const format, ...)
 {
