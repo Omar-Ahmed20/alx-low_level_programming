@@ -36,8 +36,6 @@ size_t print_listint_safe(const listint_t *head)
 	size_t i, count = 0;
 	const listint_t **list = NULL;
 
-	if (!head)
-		exit(98);
 	while (head)
 	{
 		for (i = 0; i < count; i++)
