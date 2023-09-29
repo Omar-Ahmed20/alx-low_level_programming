@@ -6,12 +6,12 @@
  */
 void print_binary(unsigned long int n)
 {
-	int mask = 16;
+	int mask = sizeof(n) * 8;
 	int p = 0;
 
 	while (mask)
 	{
-		if (n & 1 << --mask)
+		if (n & 1l << --mask)
 		{
 			_putchar('1');
 			p++;
