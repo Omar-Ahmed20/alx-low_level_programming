@@ -19,8 +19,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	file = open(filename, O_RDONLY);
 	if (file == -1)
 		return (0);
-	bytes = read(file, buffer, letters);
-	bytes = write(1, buffer, bytes);
+	bytes = read(file, &buffer[0], letters);
+	bytes = write(1, &buffer[0], bytes);
 	close(file);
 	return (bytes);
 }
