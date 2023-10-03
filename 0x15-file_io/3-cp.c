@@ -20,23 +20,23 @@ int main(int argc, char **argv)
 	char buffer[1024];
 
 	if (argc != 3)
-		dprintf(2, USAGE), exit(97);
+		dprintf(STDERR_FILENO, USAGE), exit(97);
 	from_fd = open(argv[1], O_RDONLY);
 	if (from_fd == -1)
-		dprintf(2, NOREAD_ERROR, argv[1]), exit(98);
+		dprintf(STDERR_FILENO, NOREAD_ERROR, argv[1]), exit(98);
 	to_fd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (to_fd == -1)
-		dprintf(2, NOWRITE_ERROR, argv[2]), exit(99);
+		dprintf(STDERR_FILENO, NOWRITE_ERROR, argv[2]), exit(99);
 	while ((bytes = read(from_fd, buffer, 1024)) > 0)
 		if (write(to_fd, buffer, bytes) != bytes)
-			dprintf(2, NOWRITE_ERROR, argv[2]), exit(99);
+			dprintf(STDERR_FILENO, NOWRITE_ERROR, argv[2]), exit(99);
 	if (bytes == -1)
-		dprintf(2, NOREAD_ERROR, argv[1]), exit(98);
+		dprintf(STDERR_FILENO, NOREAD_ERROR, argv[1]), exit(98);
 	from_fd = close(from_fd);
 	to_fd = close(to_fd);
 	if (from_fd)
-		dprintf(2, NOCLOSE_ERROR, from_fd), exit(100);
+		dprintf(STDERR_FILENO, NOCLOSE_ERROR, from_fd), exit(100);
 	if (to_fd)
-		dprintf(2, NOCLOSE_ERROR, to_fd), exit(100);
+		dprintf(STDERR_FILENO, NOCLOSE_ERROR, to_fd), exit(100);
 	return (1);
 }
