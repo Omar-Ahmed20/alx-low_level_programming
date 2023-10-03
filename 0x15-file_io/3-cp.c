@@ -38,5 +38,5 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, NOCLOSE_ERROR, from_fd), exit(100);
 	if (to_fd)
 		dprintf(STDERR_FILENO, NOCLOSE_ERROR, from_fd), exit(100);
-	return (1);
+	return (EXIT_SUCCESS);
 }
